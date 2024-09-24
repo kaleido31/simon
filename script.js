@@ -15,7 +15,8 @@ $(document).on("keydown", function () {
   }
 });
 
-$(document).on("touchstart", function () {
+$(document).on("touchstart", function (event) {
+  event.preventDefault();
   if (!started) {
     started = true;
     begin();
