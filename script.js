@@ -24,7 +24,7 @@ $(document).on("touchstart", function (event) {
 });
 
 //click event
-$(".btn").click((event) => {
+$(".btn").on ("click touchend", (event) => {
   userPlayer(event);
 });
 
