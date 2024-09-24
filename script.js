@@ -29,6 +29,7 @@ $(".btn").on ("click", (event) => {
 });
 
 $(".btn").on ("touchend", (event) => {
+  event.preventDefault();
   userPlayer(event);
 });
 
