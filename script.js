@@ -24,9 +24,14 @@ $(document).on("touchstart", function (event) {
 });
 
 //click event
-$(".btn").on ("click touchend", (event) => {
+$(".btn").on ("click", (event) => {
   userPlayer(event);
 });
+
+$(".btn").on ("touchend", (event) => {
+  userPlayer(event);
+});
+
 
 //sound playing
 var playSound = (name) => {
