@@ -1,5 +1,5 @@
 alert(
-  "COmputer will give you a color sequence, you need to accurately repeat that, however, keep in mind that after every level you need to hit the colors of previous levels first ... You will lose eventually ~Your's Yasir"
+  "Computer will give you a color sequence, you need to accurately repeat that, however, keep in mind that after every level you need to hit the colors of previous levels first ... You will lose eventually ~Your's Yasir"
 );
 var gamePattern = [];
 var userPattern = [];
@@ -8,14 +8,7 @@ var level = 0;
 var started = false;
 var listen = false;
 
-$(document).keydown(function () {
-  if (!started) {
-    started = true;
-    begin();
-  }
-});
-
-$(document).touchstart(function () {
+$(document).on(" keydown touchstart", function () {
   if (!started) {
     started = true;
     begin();
