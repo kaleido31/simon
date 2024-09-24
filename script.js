@@ -15,6 +15,13 @@ $(document).keydown(function () {
   }
 });
 
+$(document).touchstart(function () {
+  if (!started) {
+    started = true;
+    begin();
+  }
+});
+
 //click event
 $(".btn").click((event) => {
   userPlayer(event);
