@@ -8,7 +8,14 @@ var level = 0;
 var started = false;
 var listen = false;
 
-$(document).on("keydown touchstart", function () {
+$(document).on("keydown", function () {
+  if (!started) {
+    started = true;
+    begin();
+  }
+});
+
+$(document).on("touchstart", function () {
   if (!started) {
     started = true;
     begin();
